@@ -70,19 +70,23 @@ export default function Quiz(props) {
                     selectAnswer={selectAnswer} 
                 />
             }
-            {scores ? <button 
-                            className="quizpage-button_check" 
+            {scores ? <div className="quizpage-scores">
+                        <button 
+                            className="quizpage-button" 
                             onClick={checkAnswers}>
                                 Check answers
                         </button> 
-                    : <div className="quizpage-scores">
                         <h4 className="quizpage-scores_info">
-                            You scored {counter}/{props.numberOfQuestions} correct answers</h4>
+                            Choose your answers and press the button</h4>
+                        </div>
+                    : <div className="quizpage-scores">
                         <button 
-                            className="quizpage-button_playagain" 
+                            className="quizpage-button" 
                             onClick={playAgain}>Play again
                         </button>  
-                    </div>
+                        <h4 className="quizpage-scores_info">
+                            You scored {counter}/{props.numberOfQuestions} correct answers</h4>
+                        </div>
             }
         </div>
     )

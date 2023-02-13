@@ -14,4 +14,6 @@ export function encoder(str) {
     .replace(/&divide;/g,"÷")
     .replace(/&ndash;/g,"–")
     .replace(/&ntilde;/g,"ñ")
+    .replace(/&uuml;/g,"ü")
+    .replace(/&iacute;/g,"í")
 }
